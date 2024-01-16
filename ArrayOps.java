@@ -63,7 +63,7 @@ public class ArrayOps {
                 up = false;
             }
         }
-        return up && down;
+        return up || down;
     }
         
     
