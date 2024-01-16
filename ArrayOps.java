@@ -51,12 +51,19 @@ public class ArrayOps {
     
 
     public static boolean isSorted(int [] array) {
+        boolean up = true;
+        boolean down = true;
         for (int i = 0; i < array.length; i++) {
             if(array[i] < array[i+1]){
-                return false;
+                down = false;
             }
         }
-        return true;
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] > array[i+1]){
+                up = false;
+            }
+        }
+        return up && down;
     }
         
     
